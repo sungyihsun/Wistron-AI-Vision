@@ -8,17 +8,18 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&display=swap');
-        body { font-family: 'Noto Sans TC', sans-serif; }
+        body { font-family: 'Noto Sans TC', sans-serif; background-color: #f8fafc; }
         .tab-button.active {
             border-bottom: 3px solid #2563eb;
             color: #2563eb;
             font-weight: 900;
         }
         .tech-card:hover { transform: translateY(-5px); transition: all 0.3s; }
-        .hero-gradient { background: linear-gradient(135deg, #1e293b 0%, #334155 100%); }
+        .hero-gradient { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); }
+        .img-container { background-color: #e2e8f0; overflow: hidden; border-radius: 0.75rem; }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-900">
+<body class="text-gray-900">
 
     <nav class="bg-white p-4 shadow-md sticky top-0 z-50">
         <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
@@ -37,14 +38,14 @@
     </nav>
 
     <div id="home" class="tab-content">
-        <div class="hero-gradient text-white py-20 px-4">
+        <div class="hero-gradient text-white py-16 px-4">
             <div class="container mx-auto text-center">
                 <h1 class="text-5xl font-black mb-6">品質檢測解決方案中心</h1>
-                <p class="text-2xl text-blue-300 font-bold mb-8">具備同時服務 5 個生產站點的卓越品質檢測能力</p>
-                <div class="flex justify-center space-x-4">
-                    <span class="bg-blue-600 px-4 py-2 rounded-full text-sm">主機板瑕疵檢測</span>
-                    <span class="bg-green-600 px-4 py-2 rounded-full text-sm">Final Assembly 動作識別</span>
-                    <span class="bg-purple-600 px-4 py-2 rounded-full text-sm">VLM 視覺語言模型</span>
+                <p class="text-2xl text-blue-300 font-bold mb-8">同時服務 5 個生產站點的卓越檢測能力</p>
+                <div class="flex flex-wrap justify-center gap-3">
+                    <span class="bg-blue-600/20 border border-blue-500 px-4 py-2 rounded-full text-sm font-bold tracking-wider">主機板零件瑕疵檢測</span>
+                    <span class="bg-green-600/20 border border-green-500 px-4 py-2 rounded-full text-sm font-bold tracking-wider">Final Assembly 動作識別</span>
+                    <span class="bg-purple-600/20 border border-purple-500 px-4 py-2 rounded-full text-sm font-bold tracking-wider">VLM 視覺語言模型</span>
                 </div>
             </div>
         </div>
@@ -53,23 +54,27 @@
             <div class="grid md:grid-cols-2 gap-8 mb-12">
                 <div class="bg-white p-8 rounded-2xl shadow-xl border-t-4 border-blue-500">
                     <div class="flex items-center mb-4">
-                        <span class="material-icons text-3xl text-blue-500 mr-2">view_in_ar</span>
+                        <span class="material-icons text-3xl text-blue-500 mr-2">memory</span>
                         <h2 class="text-2xl font-bold">靜態檢測: AOI AI</h2>
                     </div>
-                    <p class="text-gray-600 leading-relaxed mb-4">
-                        專注於主機板 SMT 瑕疵，涵蓋電容、電感、電阻、連接器及晶片等零件。利用異常檢測模型學習 Golden Sample，實現零遺漏的品質守護。
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        專注於主機板 SMT 瑕疵，涵蓋電容、電感、電阻、連接器及晶片。利用異常檢測模型學習 Golden Sample，實現零遺漏監控。
                     </p>
-                    <img src="https://images.unsplash.com/photo-1591433087033-d39f7bea2e82?auto=format&fit=crop&w=800&q=80" alt="PCBA" class="rounded-lg shadow-inner h-48 w-full object-cover">
+                    <div class="img-container">
+                        <img src="images/pcba_aoi.jpg" alt="主機板瑕疵檢測" class="w-full h-56 object-cover hover:scale-105 transition duration-500" onerror="this.src='https://via.placeholder.com/800x450?text=PCBA+AOI+Image+Missing'">
+                    </div>
                 </div>
                 <div class="bg-white p-8 rounded-2xl shadow-xl border-t-4 border-green-500">
                     <div class="flex items-center mb-4">
                         <span class="material-icons text-3xl text-green-500 mr-2">precision_manufacturing</span>
+                        <h2 class="text-2xl font-bold">動態檢測: Final Assembly</h2>
                     </div>
-                    <h2 class="text-2xl font-bold">動態檢測: Final Assembly</h2>
-                    <p class="text-gray-600 leading-relaxed mb-4">
-                        針對最終組裝 (Final Assembly) 站點，透過物件追蹤與特徵相似度比對，監控作業合規性與 SOP 執行狀況。
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        針對 Final Assembly 站點，透過物件追蹤與特徵相似度比對作業員動作，確保組裝 SOP 100% 執行正確。
                     </p>
-                    <img src="https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?auto=format&fit=crop&w=800&q=80" alt="Assembly Line" class="rounded-lg shadow-inner h-48 w-full object-cover">
+                    <div class="img-container">
+                        <img src="images/assembly_line.jpg" alt="組裝線動作識別" class="w-full h-56 object-cover hover:scale-105 transition duration-500" onerror="this.src='https://via.placeholder.com/800x450?text=Assembly+FA+Image+Missing'">
+                    </div>
                 </div>
             </div>
         </div>
@@ -82,27 +87,27 @@
                 <span class="material-icons text-4xl text-blue-600 mb-4">psychology</span>
                 <h3 class="text-xl font-bold mb-4">AI 檢測演算法</h3>
                 <ul class="text-gray-600 space-y-3 text-sm">
-                    <li class="flex items-start"><span class="material-icons text-xs mt-1 mr-2 text-blue-500">check_circle</span><b>異常檢測：</b>學習「好資料」判斷未知瑕疵</li>
-                    <li class="flex items-start"><span class="material-icons text-xs mt-1 mr-2 text-blue-500">check_circle</span><b>多模型整合：</b>物件辨識 + 分類模型</li>
-                    <li class="flex items-start"><span class="material-icons text-xs mt-1 mr-2 text-blue-500">check_circle</span><b>VLM 應用：</b>最新視覺語言模型輔助邏輯判定</li>
+                    <li><b>異常檢測：</b>學習良好資料以判斷未知瑕疵</li>
+                    <li><b>多模型整合：</b>物件辨識 (OD) + 分類模型</li>
+                    <li><b>VLM 應用：</b>視覺語言模型輔助複雜邏輯判斷</li>
                 </ul>
             </div>
             <div class="bg-white p-8 rounded-2xl shadow-md tech-card border border-gray-100">
                 <span class="material-icons text-4xl text-green-600 mb-4">settings_remote</span>
                 <h3 class="text-xl font-bold mb-4">軟硬體整合控制</h3>
                 <ul class="text-gray-600 space-y-3 text-sm">
-                    <li class="flex items-start"><span class="material-icons text-xs mt-1 mr-2 text-green-500">check_circle</span><b>手臂控制：</b>Robot Control 自動化多視角取像</li>
-                    <li class="flex items-start"><span class="material-icons text-xs mt-1 mr-2 text-green-500">check_circle</span><b>智能觸發：</b>精確連動光源與工業相機</li>
-                    <li class="flex items-start"><span class="material-icons text-xs mt-1 mr-2 text-green-500">check_circle</span><b>產線智能化：</b>從視覺到控制的完整方案</li>
+                    <li><b>手臂控制：</b>Robot Control 自動化多角度取像</li>
+                    <li><b>智能觸發：</b>連動工業相機與光源同步</li>
+                    <li><b>智能化產線：</b>視覺與控制端到端方案</li>
                 </ul>
             </div>
             <div class="bg-white p-8 rounded-2xl shadow-md tech-card border border-gray-100">
-                <span class="material-icons text-4xl text-purple-600 mb-4">transfer_within_a_station</span>
+                <span class="material-icons text-4xl text-purple-600 mb-4">track_changes</span>
                 <h3 class="text-xl font-bold mb-4">動作識別技術</h3>
                 <ul class="text-gray-600 space-y-3 text-sm">
-                    <li class="flex items-start"><span class="material-icons text-xs mt-1 mr-2 text-purple-500">check_circle</span><b>物件辨識追蹤：</b>即時監控零件流向</li>
-                    <li class="flex items-start"><span class="material-icons text-xs mt-1 mr-2 text-purple-500">check_circle</span><b>特徵相似度：</b>比對動作特徵確保 SOP 準確</li>
-                    <li class="flex items-start"><span class="material-icons text-xs mt-1 mr-2 text-purple-500">check_circle</span><b>行為分析：</b>偵測異常組裝行為並即時告警</li>
+                    <li><b>物件追蹤：</b>即時監控零件與手臂流向</li>
+                    <li><b>特徵相似度：</b>比對動作特徵確保合規</li>
+                    <li><b>異常告警：</b>即時攔截不當組裝行為</li>
                 </ul>
             </div>
         </div>
@@ -110,56 +115,34 @@
 
     <div id="human-resource" class="tab-content hidden container mx-auto px-4 py-12">
         <div class="text-center mb-12">
-            <h2 class="text-3xl font-black mb-4">人力編制與支援能力</h2>
-            <p class="text-gray-500">總投入 9 人，分為三組專業 Team，專注於產品品質</p>
+            <h2 class="text-3xl font-black mb-4 tracking-tight">人力編制與服務站點</h2>
+            <p class="text-gray-500 font-bold">總人力 9 人 | 每個 Team 各 3 人 | 服務 5 個生產站點</p>
         </div>
         
-        <div class="grid md:grid-cols-3 gap-8 mb-12 text-center">
-            <div class="bg-blue-50 p-6 rounded-xl border border-blue-200">
-                <h4 class="font-bold text-blue-800">AOI Team A</h4>
-                <p class="text-2xl font-black">3 人</p>
-                <p class="text-sm text-blue-600">負責 2 個站點</p>
-            </div>
-            <div class="bg-green-50 p-6 rounded-xl border border-green-200">
-                <h4 class="font-bold text-green-800">AOI Team B</h4>
-                <p class="text-2xl font-black">3 人</p>
-                <p class="text-sm text-green-600">負責 2 個站點</p>
-            </div>
-            <div class="bg-purple-50 p-6 rounded-xl border border-purple-200">
-                <h4 class="font-bold text-purple-800">FA 動作識別組</h4>
-                <p class="text-2xl font-black">3 人</p>
-                <p class="text-sm text-purple-600">負責 1 個站點</p>
-            </div>
-        </div>
-
-        <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-200">
+        <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100">
             <table class="min-w-full text-left">
-                <thead class="bg-gray-800 text-white">
+                <thead class="bg-slate-800 text-white">
                     <tr>
-                        <th class="py-4 px-6">負責組別</th>
-                        <th class="py-4 px-6">核心技術項目</th>
-                        <th class="py-4 px-6">負責人/代表</th>
-                        <th class="py-4 px-6 text-center">同步服務站點數</th>
+                        <th class="py-5 px-8 uppercase text-xs tracking-widest">負責團隊</th>
+                        <th class="py-5 px-8 uppercase text-xs tracking-widest">技術核心項目</th>
+                        <th class="py-5 px-8 uppercase text-xs tracking-widest text-center">服務能力</th>
                     </tr>
                 </thead>
-                <tbody class="divide-y divide-gray-200">
+                <tbody class="divide-y divide-gray-100">
                     <tr>
-                        <td class="py-4 px-6 font-bold">AOI 靜態檢測 A</td>
-                        <td class="py-4 px-6 text-sm">主機板零件瑕疵 (電容/電阻/晶片)</td>
-                        <td class="py-4 px-6">Rosa</td>
-                        <td class="py-4 px-6 text-center font-bold text-blue-600">2 Stations</td>
+                        <td class="py-6 px-8"><div class="font-black text-blue-700">AOI Team A (Rosa)</div></td>
+                        <td class="py-6 px-8 text-gray-600 font-medium">主機板零件瑕疵 (電容/電阻/晶片)</td>
+                        <td class="py-6 px-8 text-center"><span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full font-bold">2 Stations</span></td>
                     </tr>
                     <tr>
-                        <td class="py-4 px-6 font-bold">AOI 靜態檢測 B</td>
-                        <td class="py-4 px-6 text-sm">連接器/電感檢測、VLM 判定</td>
-                        <td class="py-4 px-6">Kilo & Naomi</td>
-                        <td class="py-4 px-6 text-center font-bold text-blue-600">2 Stations</td>
+                        <td class="py-6 px-8"><div class="font-black text-blue-700">AOI Team B (Kilo & Naomi)</div></td>
+                        <td class="py-6 px-8 text-gray-600 font-medium">連接器/電感檢測、VLM 判定</td>
+                        <td class="py-6 px-8 text-center"><span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full font-bold">2 Stations</span></td>
                     </tr>
                     <tr>
-                        <td class="py-4 px-6 font-bold">FA 動態動作識別</td>
-                        <td class="py-4 px-6 text-sm">Final Assembly SOP 合規監控</td>
-                        <td class="py-4 px-6">動作識別團隊</td>
-                        <td class="py-4 px-6 text-center font-bold text-green-600">1 Station</td>
+                        <td class="py-6 px-8"><div class="font-black text-green-700">FA 動作識別組</div></td>
+                        <td class="py-6 px-8 text-gray-600 font-medium">Final Assembly SOP 合規監控</td>
+                        <td class="py-6 px-8 text-center"><span class="bg-green-100 text-green-700 px-3 py-1 rounded-full font-bold">1 Station</span></td>
                     </tr>
                 </tbody>
             </table>
@@ -167,38 +150,35 @@
     </div>
 
     <div id="productization" class="tab-content hidden container mx-auto px-4 py-12">
-        <h2 class="text-3xl font-black text-center mb-12">產品化開發與維運效益</h2>
-        <div class="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-                <div class="mb-8">
-                    <h4 class="text-xl font-bold text-blue-600 mb-2 flex items-center">
-                        <span class="material-icons mr-2">speed</span> 30% 產品化開發策略
-                    </h4>
-                    <p class="text-gray-600 leading-relaxed">
-                        每位工程師投入 30% 時間於模組化任務，研發通用化 AI 組件與自動取像框架，確保未來產品 Rollout 時能快速複製並減少重複開發。
-                    </p>
-                </div>
-                <div class="space-y-4">
-                    <div class="bg-white p-4 rounded-lg shadow-sm border-l-4 border-blue-500">
-                        <b>維運輕量化：</b>統一代碼與介面，降低 50% 維護成本。
+        <div class="flex flex-col md:flex-row gap-12 items-center">
+            <div class="md:w-1/2">
+                <h2 class="text-4xl font-black mb-6">產品化開發與維運</h2>
+                <div class="space-y-6">
+                    <div class="p-6 bg-white rounded-xl shadow-sm border-l-8 border-blue-600">
+                        <h4 class="font-bold text-lg mb-2">30% 產品化開發策略</h4>
+                        <p class="text-gray-600">每位工程師投入 30% 時間於模組化開發，確保技術資產可被重複調用，加速 Rollout 速度並降低長期管理工時。</p>
                     </div>
-                    <div class="bg-white p-4 rounded-lg shadow-sm border-l-4 border-blue-500">
-                        <b>模組化組件：</b>支援機械手臂快速換站與相機動態觸發。
+                    <div class="p-6 bg-white rounded-xl shadow-sm border-l-8 border-indigo-600">
+                        <h4 class="font-bold text-lg mb-2">維運輕量化</h4>
+                        <p class="text-gray-600">統一代碼與介面規範，實現輕量化維運，大幅提升管理 5 個站點的穩定性與效率。</p>
                     </div>
                 </div>
             </div>
-            <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&q=80" alt="Future Tech" class="rounded-3xl shadow-2xl">
+            <div class="md:w-1/2">
+                <img src="images/tech_future.jpg" alt="產品化能力展望" class="rounded-3xl shadow-2xl" onerror="this.src='https://via.placeholder.com/800x600?text=Tech+Future+Image+Missing'">
+            </div>
         </div>
     </div>
 
-    <footer class="bg-white border-t border-gray-200 pt-12 pb-8">
-        <div class="container mx-auto text-center">
-            <div class="flex items-center justify-center mb-4 text-blue-600">
-                <span class="material-icons mr-2 text-3xl">visibility</span>
-                <span class="font-black tracking-widest text-xl">AI EYES</span>
+    <footer class="bg-white border-t border-gray-200 pt-16 pb-12 mt-12">
+        <div class="container mx-auto text-center px-4">
+            <div class="flex items-center justify-center mb-6 text-blue-600">
+                <span class="material-icons mr-2 text-4xl">visibility</span>
+                <span class="font-black tracking-widest text-2xl uppercase">AI EYES</span>
             </div>
-            <p class="text-gray-400 text-xs mb-2">Developed by JMD6D0 Division</p>
-            <p class="text-gray-600 font-bold">
+            <p class="text-gray-400 text-xs tracking-widest mb-4">ARTIFICIAL INTELLIGENCE DIVISION 2 - JMD6D0</p>
+            <div class="w-16 h-1 bg-blue-600 mx-auto mb-6"></div>
+            <p class="text-gray-600 font-bold text-sm">
                 &copy; 2026 緯創資通 人工智慧二部 (JMD6D0) - AI 視覺團隊. All rights reserved.
             </p>
         </div>
@@ -206,21 +186,12 @@
 
     <script>
         function showTab(tabId) {
-            document.querySelectorAll('.tab-content').forEach(function(content) {
-                content.classList.add('hidden');
-            });
-            document.querySelectorAll('.tab-button').forEach(function(btn) {
-                btn.classList.remove('active');
-            });
+            document.querySelectorAll('.tab-content').forEach(content => content.classList.add('hidden'));
+            document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
             document.getElementById(tabId).classList.remove('hidden');
-            // 處理按鈕 Active 樣式
-            if (event && event.currentTarget) {
-                event.currentTarget.classList.add('active');
-            }
+            if (event && event.currentTarget) event.currentTarget.classList.add('active');
         }
-        document.addEventListener('DOMContentLoaded', function() {
-            showTab('home');
-        });
+        document.addEventListener('DOMContentLoaded', () => showTab('home'));
     </script>
 </body>
 </html>
