@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 視覺團隊 - 品質檢測解決方案</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* 自定義 CSS - 讓 Tab 點擊時有更好的視覺反饋 */
+        .tab-button.active {
+            @apply border-indigo-500 text-indigo-600 font-semibold;
+        }
+        /* 圖片置中和圓角 */
+        .feature-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 0.5rem; /* rounded-lg */
+            margin: 1.5rem auto; /* my-6, mx-auto */
+            display: block; /* 確保 margin auto 有效 */
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans leading-normal tracking-normal">
+
+    <nav class="bg-white p-6 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-gray-800">AI 視覺團隊</a>
+            <div class="flex space-x-4">
+                <button class="tab-button p-2 text-gray-600 hover:text-indigo-600 focus:outline-none active" onclick="showTab('home')">首頁</button>
+                <button class="tab-button p-2 text-gray-600 hover:text-indigo-600 focus:outline-none" onclick="showTab('team')">團隊介紹</button>
+                <button class="tab-button p-2 text-gray-600 hover:text-indigo-600 focus:outline-none" onclick="showTab('human-resource')">人力配置</button>
+                <button class="tab-button p-2 text-gray-600 hover:text-indigo-600 focus:outline-none" onclick="showTab('productization')">產品化能力</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mx-auto mt-8 p-6 bg-white rounded-lg shadow-xl">
+
+        <div id="home" class="tab-content">
+            <h1 class="text-4xl font-extrabold text-gray-900 mb-6 text-center">AI 視覺團隊 - 品質檢測解決方案中心</h1>
+            <p class="text-lg text-gray-700 leading-relaxed mb-8 text-center max-w-3xl mx-auto">
+                我們致力於提供最先進的 AI 視覺檢測方案，涵蓋從靜態到動態的全方位品質監控，確保您的生產流程達到卓越標準。我們的目標是透過智慧自動化，提升效率、降低成本，並為未來的智慧工廠奠定基石。
+            </p>
+            <div class="flex justify-center items-center my-8">
+                <img src="https://via.placeholder.com/800x450?text=AI+Vision+Quality+Control+Overview" alt="AI Quality Control Overview" class="feature-image">
+            </div>
+            <h2 class="text-3xl font-bold text-gray-800 mb-4 border-b-2 pb-2">核心任務：雙維度品質檢測</h2>
+            <div class="grid md:grid-cols-2 gap-8 mb-8">
+                <div>
+                    <h3 class="text-2xl font-semibold text-indigo-700 mb-2">靜態檢測 (AOI AI)</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        透過高精度的 AOI (自動光學檢測) 結合 AI 深度學習，我們能迅速且準確地識別產品外觀瑕疵、零件錯漏、尺寸偏差等問題。這項技術大幅提升了檢測效率，並減少了人為判斷的誤差。
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-semibold text-indigo-700 mb-2">動態檢測 (FA 動作識別)</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        針對生產線上的自動化設備 (Factory Automation) 或作業員動作，我們運用 AI 動作識別技術進行即時監控。這包括機械臂路徑分析、組裝SOP合規性檢查，確保生產流程的精確性與一致性。
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div id="team" class="tab-content hidden">
+            <h1 class="text-4xl font-extrabold text-gray-900 mb-6 text-center">我們的專業團隊</h1>
+            <p class="text-lg text-gray-700 leading-relaxed mb-8 text-center max-w-3xl mx-auto">
+                我們的 AI 視覺團隊由經驗豐富的工程師組成，專精於機器學習、電腦視覺及自動化控制。每位成員都肩負著重要的職責，共同推動技術創新，為客戶提供卓越的解決方案。
+            </p>
+            <div class="grid md:grid-cols-3 gap-8 text-center my-8">
+                <div class="bg-indigo-50 p-6 rounded-lg shadow-md">
+                    <img src="https://via.placeholder.com/150?text=Rosa" alt="Rosa" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
+                    <h3 class="text-xl font-bold text-gray-800">Rosa</h3>
+                    <p class="text-indigo-600 font-medium">AOI AI 專家 (靜態檢測)</p>
+                    <p class="text-gray-600 text-sm mt-2">負責高精度影像瑕疵檢測演算法開發與模型優化，專精於深度學習在表面缺陷分析的應用。</p>
+                </div>
+                <div class="bg-indigo-50 p-6 rounded-lg shadow-md">
+                    <img src="https://via.placeholder.com/150?text=Kilo+%26+Naomi" alt="Kilo & Naomi" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
+                    <h3 class="text-xl font-bold text-gray-800">Kilo & Naomi</h3>
+                    <p class="text-indigo-600 font-medium">AOI AI 工程師 (靜態檢測)</p>
+                    <p class="text-gray-600 text-sm mt-2">專注於數據標註、模型訓練與邊緣部署，確保靜態檢測系統的穩定運行與效能。具備豐富的現場調試經驗。</p>
+                </div>
+                <div class="bg-indigo-50 p-6 rounded-lg shadow-md">
+                    <img src="https://via.placeholder.com/150?text=Action+Group" alt="動作識別組" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
+                    <h3 class="text-xl font-bold text-gray-800">動作識別組</h3>
+                    <p class="text-indigo-600 font-medium">FA 動作識別專家 (動態檢測)</p>
+                    <p class="text-gray-600 text-sm mt-2">負責產線自動化動作邏輯分析、行為識別模型開發，確保機械手臂與作業流程的精確性與合規性。</p>
+                </div>
+            </div>
+            <div class="flex justify-center items-center my-8">
+                <img src="https://via.placeholder.com/800x450?text=Our+Talented+Team" alt="Our Talented Team" class="feature-image">
+            </div>
+        </div>
+
+        <div id="human-resource" class="tab-content hidden">
+            <h1 class="text-4xl font-extrabold text-gray-900 mb-6 text-center">服務能力與人力配置</h1>
+            <p class="text-lg text-gray-700 leading-relaxed mb-8 text-center max-w-3xl mx-auto">
+                我們理解快速變化的生產需求，因此團隊採取高效的「70% 專案執行 + 30% 產品化」工作模型。這使得我們能夠在專注於當前專案的同時，亦能為未來的擴展和維護打下堅實基礎，目前可穩定支援 **5 個生產站點**的同步運作與維護。
+            </p>
+
+            <div class="overflow-x-auto mb-10">
+                <table class="min-w-full bg-white border border-gray-200 rounded-lg shadow-sm">
+                    <thead>
+                        <tr class="bg-gray-50 border-b">
+                            <th class="py-3 px-6 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">負責組別</th>
+                            <th class="py-3 px-6 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">技術領域</th>
+                            <th class="py-3 px-6 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">負責工程師</th>
+                            <th class="py-3 px-6 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">當前支援站點數</th>
+                            <th class="py-3 px-6 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">工作分配 (專案/產品化)</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200">
+                        <tr>
+                            <td class="py-4 px-6 whitespace-nowrap text-sm font-medium text-gray-900">AOI 組 A</td>
+                            <td class="py-4 px-6 whitespace-nowrap text-sm text-gray-700">靜態檢測 (AOI AI)</td>
+                            <td class="py-4 px-6 whitespace-nowrap text-sm text-gray-700">Rosa</td>
+                            <td class="py-4 px-6 whitespace-nowrap text-sm text-gray-700">2 個站點</td>
+                            <td class="py-4 px-6 whitespace-nowrap text-sm text-gray-700">70% / 30%</td>
+                        </tr>
+                        <tr>
+                            <td class="py-4 px-6 whitespace-nowrap text-sm font-medium text-gray-900">AOI 組 B</td>
+                            <td class="py-4 px-6 whitespace-nowrap text-sm text-gray-700">靜態檢測 (AOI AI)</td>
+                            <td class="py-4 px-6 whitespace-nowrap text-sm text-gray-700">Kilo & Naomi</td>
+                            <td class="py-4 px-6 whitespace-nowrap text-sm text-gray-700">2 個站點</td>
+                            <td class="py-4 px-6 whitespace-nowrap text-sm text-gray-700">70% / 30%</td>
+                        </tr>
+                        <tr>
+                            <td class="py-4 px-6 whitespace-nowrap text-sm font-medium text-gray-900">動作識別組</td>
+                            <td class="py-4 px-6 whitespace-nowrap text-sm text-gray-700">動態檢測 (FA 動作識別)</td>
+                            <td class="py-4 px-6 whitespace-nowrap text-sm text-gray-700">Action Group</td>
+                            <td class="py-4 px-6 whitespace-nowrap text-sm text-gray-700">1 個站點</td>
+                            <td class="py-4 px-6 whitespace-nowrap text-sm text-gray-700">70% / 30%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="flex justify-center items-center my-8">
+                <img src="https://via.placeholder.com/800x450?text=Human+Resource+Allocation" alt="Human Resource Allocation" class="feature-image">
+            </div>
+            <h2 class="text-3xl font-bold text-gray-800 mb-4 border-b-2 pb-2">工作模型效益</h2>
+            <ul class="list-disc list-inside text-gray-700 text-lg leading-relaxed space-y-2 mb-8 ml-4">
+                <li>**高效能專案交付：** 70% 時間專注於各站點的客製化需求與快速部署。</li>
+                <li>**長期價值創造：** 30% 時間投入模組化開發，確保解決方案的彈性和可擴展性。</li>
+                <li>**穩定支援能力：** 透過標準化流程，可靈活調配資源，確保 5 個站點的穩定運行與即時支援。</li>
+            </ul>
+        </div>
+
+        <div id="productization" class="tab-content hidden">
+            <h1 class="text-4xl font-extrabold text-gray-900 mb-6 text-center">產品化能力：模組化開發 (The 30% Strategy)</h1>
+            <p class="text-lg text-gray-700 leading-relaxed mb-8 text-center max-w-3xl mx-auto">
+                我們深信，真正的效率來自於系統的模組化與標準化。團隊工程師投入 30% 的精力於產品化開發，這項策略不僅提升了開發效率，更為未來的擴展和維護帶來長遠價值。我們不只是在「做專案」，我們是在「建產品」。
+            </p>
+            <div class="grid md:grid-cols-2 gap-8 mb-8">
+                <div>
+                    <img src="https://via.placeholder.com/400x250?text=Modular+Components" alt="Modular Components" class="feature-image my-0">
+                    <h3 class="text-2xl font-semibold text-indigo-700 mb-2">模組化組件 (Modular Components)</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        我們將影像預處理、AI 模型、特徵提取、結果輸出等核心功能進行高度模組化與封裝。這使得新站點在導入時，可直接呼叫現有組件，相較於傳統客製化開發，導入速度提升 **50%** 以上。
+                    </p>
+                </div>
+                <div>
+                    <img src="https://via.placeholder.com/400x250?text=Lightweight+Maintenance" alt="Lightweight Maintenance" class="feature-image my-0">
+                    <h3 class="text-2xl font-semibold text-indigo-700 mb-2">輕量化維運 (Lightweight Maintenance)</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        透過統一的程式碼規範和標準化的 API 接口，我們的解決方案具備極佳的維護性。單一工程師即可有效監控多個站點的系統健康狀況，大幅降低了維運成本和複雜度。
+                    </p>
+                </div>
+                <div>
+                    <img src="https://via.placeholder.com/400x250?text=Scalable+Rollout" alt="Scalable Rollout" class="feature-image my-0">
+                    <h3 class="text-2xl font-semibold text-indigo-700 mb-2">快速擴展 (Scalable Rollout)</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        憑藉堅實的模組化基礎，我們的解決方案具備快速複製到第 6、第 7 甚至更多站點的潛力。這意味著當您的業務擴張時，我們的 AI 視覺檢測能力能夠迅速跟進。
+                    </p>
+                </div>
+                <div>
+                    <img src="https://via.placeholder.com/400x250?text=Continuous+Optimization" alt="Continuous Optimization" class="feature-image my-0">
+                    <h3 class="text-2xl font-semibold text-indigo-700 mb-2">持續優化 (Continuous Optimization)</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        產品化不僅是代碼重用，更是透過自動化機制收集現場數據，自動識別邊緣案例，並進行模型的持續迭代與重訓練。確保 AI 模型的檢測精準度始終保持在最佳狀態。
+                    </p>
+                </div>
+            </div>
+
+            <h2 class="text-3xl font-bold text-gray-800 mb-4 border-b-2 pb-2 mt-10">為什麼選擇我們的 AI 方案？</h2>
+            <ul class="list-disc list-inside text-gray-700 text-lg leading-relaxed space-y-2 mb-8 ml-4">
+                <li>**高並發支持:** 我們的設計理念旨在高效處理多站點任務，確保在同時服務多個生產線時，性能不受影響。</li>
+                <li>**技術領先:** 持續投入研發，將最新的 AI 視覺技術應用於實際生產問題。</li>
+                <li>**投資報酬率高:** 透過模組化降低開發與維運成本，長期為您創造更大的價值。</li>
+                <li>**數據驅動決策:** 提供直觀的數據看板與分析報告，讓您清晰掌握各站點的檢測準確率 (Yield Rate) 與異常情況。</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <footer class="bg-gray-800 text-white p-6 mt-8">
+        <div class="container mx-auto text-center text-sm">
+            &copy; 2026 AI 視覺團隊. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        function showTab(tabId) {
+            // 隱藏所有內容區塊
+            document.querySelectorAll('.tab-content').forEach(function(tabContent) {
+                tabContent.classList.add('hidden');
+            });
+
+            // 移除所有按鈕的 active 樣式
+            document.querySelectorAll('.tab-button').forEach(function(button) {
+                button.classList.remove('active');
+            });
+
+            // 顯示目標內容區塊
+            document.getElementById(tabId).classList.remove('hidden');
+
+            // 為被點擊的按鈕添加 active 樣式
+            event.currentTarget.classList.add('active');
+        }
+
+        // 頁面加載完成後，預設顯示 'home' tab
+        document.addEventListener('DOMContentLoaded', function() {
+            showTab('home'); // 確保首頁載入時是 active 狀態
+            document.querySelector('.tab-button').classList.add('active'); // 預設第一個按鈕 active
+        });
+    </script>
+
+</body>
+</html>
